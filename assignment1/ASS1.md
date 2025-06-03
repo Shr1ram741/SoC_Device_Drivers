@@ -19,9 +19,9 @@
 
 
 3.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Virtual Memory&nbsp;&nbsp;Physical Memory
- memory1.c&nbsp;&nbsp;8304 kB&nbsp;&nbsp;&nbsp;796 kB
- memory2.c&nbsp;&nbsp;8300 kB&nbsp;&nbsp;&nbsp;3272 kB
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Virtual Memory&nbsp;&nbsp;Physical Memory<br>
+ &nbsp;&nbsp;&nbsp;&nbspmemory1.c&nbsp;&nbsp;8304 kB&nbsp;&nbsp;&nbsp;796 kB<br>
+ &nbsp;&nbsp;&nbsp;&nbspmemory2.c&nbsp;&nbsp;8300 kB&nbsp;&nbsp;&nbsp;3272 kB
 
  
 Both memory1.c and memory2.c initialise an integer array of the same size. So, for both, the same amount of virtual memory is allocated.
