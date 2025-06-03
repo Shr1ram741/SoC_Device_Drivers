@@ -1,6 +1,6 @@
 1.<br>
   a.<br>
-    Processor: A processor (or CPU) is the brain of the computer. It is a hardware that performs data input/output, processing and storage functions for a computer system.\n
+    Processor: A processor (or CPU) is the brain of the computer. It is a hardware that performs data input/output, processing and storage functions for a computer system.<br>
     Core: A core is a single processing unit within the CPU. It is the basic computation unit of the CPU.<br>
   b. 6 - lscpu<br>
   c. 6 - /proc/cpuinfo<br>
