@@ -26,3 +26,7 @@
  
 Both memory1.c and memory2.c initialise an integer array of the same size. So, for both, the same amount of virtual memory is allocated.
 But, memory1.c does not access the array that was declared, while memory2.c does. So, since memory1.c does not access its integer array, no additional physical memory is allocated. On the other hand, memory2.c accesses the first half of its integer array, so additional physical memory is allocated.
+
+
+6.<br>
+![Process List](process_list.png)
