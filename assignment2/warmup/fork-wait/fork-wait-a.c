@@ -21,7 +21,11 @@ int main(void)
     }
     if (pid==0) {
       child();
-    }      
+    }
+    else {
+      for (int i=0;i<n;i++) {
+        pid_t cpid=wait();
+      }
   }
   return 0;
 }
