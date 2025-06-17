@@ -61,7 +61,7 @@ int main(int argc, char* argv[]) {
 		tokens = tokenize(line);
    
        //do whatever you want with the commands, here we just print them
-    if (strcomp(tokens[0],"cd")==0) {
+    if (strcmp(tokens[0],"cd")==0) {
         if (chdir(tokens[1]) != 0) {
           perror("chdir failed");
         }
