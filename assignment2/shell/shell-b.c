@@ -85,7 +85,7 @@ int main(int argc, char* argv[]) {
 
       if (WIFEXITED(status)) {
         int c_status = WEXITSTATUS(status);
-        printf("EXITSTATUS: %d",c_status);      
+        printf("EXITSTATUS: %d\n",c_status);      
     }
 
 		//for(i=0;tokens[i]!=NULL;i++){
