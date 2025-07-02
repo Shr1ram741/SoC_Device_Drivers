@@ -17,18 +17,15 @@ int main() {
         MMU mmu(mem, config);
 
         uint64_t vaddr1 = 0x12345000;
-        uint64_t val1 = 42;
+        uint64_t vaddr2 = 0x12345001;
 
-        uint64_t vaddr2 = 0x12345123;
-        uint64_t val2 = 999;
-
-        mmu.storeVal(vaddr1, val1);
-        mmu.storeVal(vaddr2, val2);
+        mmu.storeVal(vaddr1, 23);
+        mmu.storeVal(vaddr2, 729);
 
         cout << mmu.loadVal(vaddr1) << endl;
         cout << mmu.loadVal(vaddr2) << endl;
 
-        mmu.loadVal(0xFFFFF000);
+        mmu.loadVal(0x00000000);
 
     } catch (runtime_error& e) {
         cerr << "Exception: " << e.what() << endl;
