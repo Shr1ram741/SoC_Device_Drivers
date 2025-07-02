@@ -51,7 +51,7 @@ struct MMU {
     const Memory& mem;
     const Config& config;
 
-    uint64_t translate(vaddr) {
+    uint64_t translate(uint64_t vaddr) {
       uint64_t offsetBits = 0;
       uint64_t temp = config.pageSize;
       while (temp > 1) {
