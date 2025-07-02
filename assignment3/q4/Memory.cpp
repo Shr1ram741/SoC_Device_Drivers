@@ -11,5 +11,5 @@ using namespace std
 class Memory {
   friend class MMU;
   public:
-    Memory(Config& cf): nextAvailableFrame(0) {};
+    Memory(Config& cf): nextAvailableFrame(0), config(cf) {};
 }
