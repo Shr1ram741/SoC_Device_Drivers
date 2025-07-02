@@ -3,7 +3,7 @@
 #include "Memory.hpp"
 #include "Config.h"
 
-using namespace std;
+using namespace std
 
 int main() {
     try {
