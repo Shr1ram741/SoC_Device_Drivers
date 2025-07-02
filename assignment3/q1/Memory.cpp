@@ -6,7 +6,7 @@
 #include "Memory.hpp"
 #include "MMU.hpp"
 
-using namespace std;
+using namespace std
 
 class Memory {
   friend class MMU;
