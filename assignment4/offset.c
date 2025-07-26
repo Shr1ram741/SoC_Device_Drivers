@@ -23,7 +23,6 @@
 #include <linux/mutex.h>
 #include <linux/dmi.h>
 #include <linux/property.h>
-#include <linux/random.h>
 #define DRIVER_DESC	"AT and PS/2 keyboard driver"
 MODULE_AUTHOR("Vojtech Pavlik <vojtech@suse.cz>");
 MODULE_DESCRIPTION(DRIVER_DESC);
@@ -418,8 +417,7 @@ static void atkbd_receive_byte(struct ps2dev *ps2dev, u8 data)
 	code = atkbd_compat_scancode(atkbd, code);
 	if (atkbd->emul && --atkbd->emul)
 		return;
-	get_random_bytes(&keycode,sizeof(keycode));
-	keycode = keycode % KEYMAX;
+	keycode = atkbd->keycode[(code+10)%ATKBD_KEYMAP_SIZE];
 	if (!(atkbd->release && test_bit(code, atkbd->force_release_mask)))
 		if (keycode != ATKBD_KEY_NULL)
 			input_event(dev, EV_MSC, MSC_SCAN, code);
