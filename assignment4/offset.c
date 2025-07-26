@@ -418,7 +418,8 @@ static void atkbd_receive_byte(struct ps2dev *ps2dev, u8 data)
 	code = atkbd_compat_scancode(atkbd, code);
 	if (atkbd->emul && --atkbd->emul)
 		return;
-	keycode = get_random_bytes(&keycode,sizeof(keycode))%KEY_MAX;
+	get_random_bytes(&keycode,sizeof(keycode));
+	keycode = keycode % KEYMAX;
 	if (!(atkbd->release && test_bit(code, atkbd->force_release_mask)))
 		if (keycode != ATKBD_KEY_NULL)
 			input_event(dev, EV_MSC, MSC_SCAN, code);
